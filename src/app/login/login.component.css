@@ -1,18 +1,28 @@
 
+
+h3{
+    text-align: center;
+}
+
+a{
+    background-color: #7749F8;
+    color: white;
+}
+
 main{
     background-color: #7749F8;
-    padding: 20%;
+    padding: 0 25%;
+    padding-top: 8%;
+    
 }
 article{
     background-color: white;
-    margin: 10%;
-    padding: 10%;
+    padding: 10% 20%;
 }
-
 :host{
     background-color: #7749F8;
     position: absolute;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }

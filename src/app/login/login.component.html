@@ -1,10 +1,32 @@
 <main>
     <article>
-        <h3>WELCOME TO SISWEB</h3>
-        <div>Please, sign in</div>
+        <h3 >WELCOME TO SISWEB</h3>
+        <div style="text-align: center; color: grey;">Please, sign in</div>
 
-        <a class="btn container" href="/products" style="border: 2px solid white">LogIn</a>
+        <div style="margin: 0 15%;">
+            <div>
+                <div>
+                    <label for="Username" style="margin-bottom: auto;">Username</label>
+                </div>
+                <div>
+                    <input type="text" id="User_name" placeholder="Username" class="container-fluid"><br>
+                </div>
+            </div>
 
+            <div>
+                <div>
+                    <label for="Password" style="margin-bottom: auto;">Password</label>
+                </div>
+                <div>
+                    <input type="password" id="Pass_word" placeholder="Password" class="container-fluid">
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div id="buttonSignIn">
+            <a class="btn container" href="/products" style="padding: 0; margin: 0 20%; width: 57%;">SignIn</a>
+        </div>
 
     </article>
 </main>

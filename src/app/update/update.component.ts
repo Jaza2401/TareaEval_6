@@ -5,6 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
 })
-export class UpdateComponent {
 
+export class UpdateComponent {
+  data = localStorage.getItem('data');
+  newItemID = '';
+  newItemType = '';
+  newItemName = '';
+  newItemPrice = '';
+  newItemStock = '';
+
+  updateItem(){
+    console.log("hola");
+  }
 }

@@ -10,6 +10,7 @@ import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
 import { ReadComponent } from './read/read.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DeleteComponent } from './delete/delete.component';
 
 const appRoutes:Routes=[
   
@@ -17,8 +18,8 @@ const appRoutes:Routes=[
   {path:'products', component:ListComponent},
   {path:'shop', component:ReadComponent},
   {path:'create', component:CreateComponent},
-  {path:'Update', component:UpdateComponent}
-
+  {path:'update', component:UpdateComponent},
+  {path:'delete', component:DeleteComponent}
 ];
 
 
@@ -30,7 +31,8 @@ const appRoutes:Routes=[
     ListComponent,
     CreateComponent,
     UpdateComponent,
-    ReadComponent
+    ReadComponent,
+    DeleteComponent
 
 
   ],

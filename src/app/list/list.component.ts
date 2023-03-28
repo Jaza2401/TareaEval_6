@@ -23,8 +23,10 @@ export class ListComponent implements OnInit{
       for (let i = 0; i < parsed_data["names"].length; i++) {
         this.items.push({
           id: parsed_data["ids"][i],
+          type: parsed_data["types"][i],
           name: parsed_data["names"][i],
           price: parsed_data["prices"][i],
+          stock: parsed_data["stocks"][i]
         });
       }
     }

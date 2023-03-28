@@ -1,22 +1,35 @@
+<div class="container">
+  <div id="prod">
+    <br>
+    <h1>Products</h1>
+  </div>
+  <a class="btn" href="/create" style="padding: 0; margin: 2% 0;">ADD PRODUCT</a>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>TYPE</th>
+        <th>NAME</th>
+        <th>PRICE</th>
+        <th>IN STOCK</th>
+        <th>IMAGE</th>
+        <th colspan="2"> </th>
+      </tr>
+    </thead>
 
-<h2>Product List</h2>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <th>{{ item.id }}</th>
+        <td>{{ item.type }}</td>
+        <td>{{ item.name }}</td>
+        <td>${{ item.price }}</td>
+        <td>{{ item.stock }}</td>
+        <td><a href="#" style="text-decoration: none; color: black;"><i class="fi fi-rr-picture"></i></a></td>
+        <td><a href="/update" style="text-decoration: none; color: #7749F8;"><i class="fi fi-rr-pencil"></i></a></td>
+        <td><a href="/delete" style="text-decoration: none; color: #7749F8;"><i class="fi fi-rr-trash"></i></a></td>
+      </tr>
+    </tbody>
+  </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of items">
-      <td>{{ item.id }}</td>
-      <td>{{ item.name }}</td>
-      <td>{{ item.price }}</td>
-    </tr>
-  </tbody>
-</table>
-
-<a class="btn container" href="/create" style="padding: 0; margin: 0 20%; width: 57%;">Create</a>
- 
+  </div>

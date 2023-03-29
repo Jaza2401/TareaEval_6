@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ServDataService } from '../serv-data.service';
 
-
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',

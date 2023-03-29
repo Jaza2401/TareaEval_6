@@ -1,17 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
+import { ServDataService } from '../serv-data.service';
+
+@Injectable({
+  providedIn: 'root'
+})
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
 
-export class CreateComponent {
+export class CreateComponent implements OnInit{
+
+  constructor(private varInfo:ServDataService){};
 
   newItemID = '';
   newItemType = '';
   newItemName = '';
   newItemPrice = '';
   newItemStock = '';
+  newItemImg = '';
+
+
+  ngOnInit(){
+    
+  }
 
   addItem() {
 
@@ -25,7 +39,8 @@ export class CreateComponent {
         types: parsed_data["types"].concat([this.newItemType]),
         names: parsed_data["names"].concat([this.newItemName]), 
         prices: parsed_data["prices"].concat([this.newItemPrice]),
-        stocks: parsed_data["stocks"].concat([this.newItemStock])
+        stocks: parsed_data["stocks"].concat([this.newItemStock]),
+        images: parsed_data["imgs"].concat([this.newItemImg])
       };
     }
     else {
@@ -34,7 +49,8 @@ export class CreateComponent {
         types: [this.newItemType],
         names: [this.newItemName], 
         prices: [this.newItemPrice],
-        stocks: [this.newItemStock] 
+        stocks: [this.newItemStock],
+        images: [this.newItemImg]
       };
     }
     localStorage.setItem("data", JSON.stringify(json));

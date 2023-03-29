@@ -15,4 +15,5 @@ export class ServDataService {
     let result = (JSON.parse(data).ids).indexOf(posVar?.replace(/['"]+/g, ''));
     return result;
   }
+
 }

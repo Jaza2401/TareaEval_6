@@ -26,7 +26,7 @@
         <td>${{ item.price }}</td>
         <td>{{ item.stock }}</td>
         <td><a href="#" style="text-decoration: none; color: black;"><i class="fi fi-rr-picture"></i></a></td>
-        <td><a href="/update" style="text-decoration: none; color: #7749F8;"><i class="fi fi-rr-pencil"></i></a></td>
+        <td><a href="/update" (click)="controlVar(item.id)" style="text-decoration: none; color: #7749F8;"><i class="fi fi-rr-pencil"></i></a></td>
         <td><a href="/delete" style="text-decoration: none; color: #7749F8;"><i class="fi fi-rr-trash"></i></a></td>
       </tr>
     </tbody>

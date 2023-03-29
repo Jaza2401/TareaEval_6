@@ -11,6 +11,7 @@ import { UpdateComponent } from './update/update.component';
 import { ReadComponent } from './read/read.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DeleteComponent } from './delete/delete.component';
+import { ServDataService } from './serv-data.service';
 
 const appRoutes:Routes=[
   
@@ -42,7 +43,7 @@ const appRoutes:Routes=[
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ServDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

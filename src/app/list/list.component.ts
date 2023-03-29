@@ -30,5 +30,9 @@ export class ListComponent implements OnInit{
         });
       }
     }
-}
+  }
+  
+  controlVar(id:string){
+    localStorage.setItem('var',JSON.stringify(id));
+  }
 }

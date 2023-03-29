@@ -1,1 +1,33 @@
-<p>read works!</p>
+<div class="container">
+    <br>
+    <h1>Shop</h1>
+    <hr>
+    <div class="d-flex">
+    <div id="ShopList">
+        <div id="prodCard" class="d-flex container" *ngFor="let item of items">
+            <img src="" alt="ImgProd">
+            <div id="Info">
+                <div><b>PRODUCT ID: {{ item.id }}</b></div>
+                <div>{{ item.name }}</div>
+                <div><b>IN STOCK: </b>{{ item.stock }}</div>
+                <div>${{ item.price }}</div>
+                <div id="qty" class="d-flex">
+                    <div>Qty:</div>
+                    <input type="text">
+                </div>
+                <button style="color:#7749F8"><i class="fi fi-rr-shopping-cart"></i> ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+    <div id="ShopCart">
+        <div style="background-color: #D9D9D933;">
+            <div class="d-flex p-3 pb-0">
+                <i class="fi fi-rr-shopping-cart" style="color:#7749F8"></i>
+                <div style="color:#7749F8">SHOPPING CART</div>
+            </div>
+            <hr>
+            
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+<mat-dialog-actions>
 <div class="container">
   <div id="prod">
     <br>
@@ -27,9 +28,36 @@
         <td>{{ item.stock }}</td>
         <td><a href="#" style="text-decoration: none; color: black;"><i class="fi fi-rr-picture"></i></a></td>
         <td><a href="/update" (click)="controlVar(item.id)" style="text-decoration: none; color: #7749F8;"><i class="fi fi-rr-pencil"></i></a></td>
-        <td><a href="/delete" style="text-decoration: none; color: #7749F8;"><i class="fi fi-rr-trash"></i></a></td>
+        <td>
+          <a type="button" (click)="openModal(template)">
+            <i class="fi fi-rr-trash"></i>
+          </a>
+ 
+          <ng-template #template>
+            <div class="modal-header">
+              <h4 class="modal-title pull-left">Delete Product</h4>
+              <button type="button" class="btn-close close pull-right" (click)="modalRef?.hide()">
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete this product?
+            </div>
+            <div class="btn-toolbar" style="margin-right: -20px;">
+              <div style="margin-left: auto; margin-right:5%;margin-bottom:1%;">
+              <span style="padding-right: 5px;">
+              <button (click)="modalRef?.hide()" type="button" class="btn btn-secondary">
+                Cancel
+              </button>
+              </span>
+              <button (click)="delete_product(item.id)" type="button" class="btn btn-primary" style="background-color:#7749F8">Delete</button>
+            </div>
+            </div>
+              
+        </ng-template>
+
+        </td>
       </tr>
     </tbody>
   </table>
-
   </div>
+</mat-dialog-actions>

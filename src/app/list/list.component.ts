@@ -1,4 +1,8 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit, TemplateRef } from '@angular/core';
+import {DeleteComponent} from '../delete/delete.component';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,17 +15,18 @@ import { Component, Injectable, OnInit } from '@angular/core';
 })
 
 export class ListComponent implements OnInit{
-  items: any[] = [
-    {
-      id: "COS01",
-      type: "Cosmetic",
-      name: "Sephora Skin Care",
-      price: "45.50",
-      stock: "4"
-}];
+
+  modalRef?: BsModalRef;
+  constructor(private modalService: BsModalService) {}
+ 
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
+
+  items: any[] = [];
   ngOnInit() {
+
     const data = localStorage.getItem('data'); 
-    console.log(data);
 
     if (data) {
       const parsed_data = JSON.parse(data);   
@@ -40,5 +45,39 @@ export class ListComponent implements OnInit{
   
   controlVar(id:string){
     localStorage.setItem('var',JSON.stringify(id));
+  }
+
+  delete_product(id:string) {
+    let json:any = {
+      ids: [],
+      types: [],
+      names: [],
+      prices: [],
+      stocks: [],
+      images: [],
+    };
+
+    const data = localStorage.getItem('data'); 
+
+    if (data) {
+      const parsed_data = JSON.parse(data);   
+      for (let i = 0; i < parsed_data["names"].length; i++) {
+
+        if (parsed_data["ids"][i] == id) {
+          continue;
+        }
+
+        else {
+            json["ids"].push(parsed_data["ids"][i]);
+            json["types"].push(parsed_data["types"][i]);
+            json["names"].push(parsed_data["names"][i]);
+            json["prices"].push(parsed_data["prices"][i]);
+            json["stocks"].push(parsed_data["stocks"][i]);
+            json["images"].push(parsed_data["images"][i]);
+        }
+      };
+    }
+    localStorage.setItem("data", JSON.stringify(json));
+    window.location.assign("/products");
   }
 }

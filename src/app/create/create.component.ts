@@ -32,8 +32,6 @@ export class CreateComponent implements OnInit{
 
     if (data) {
         const parsed_data = JSON.parse(data);
-        console.log(parsed_data);
-        console.log(parsed_data["ids"].concat([3]));
         json  = {
         ids: parsed_data["ids"].concat([this.newItemID]), 
         types: parsed_data["types"].concat([this.newItemType]),

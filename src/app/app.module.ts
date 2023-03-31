@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -27,7 +28,8 @@ const appRoutes:Routes=[
   {path:'shop', component:ReadComponent},
   {path:'create', component:CreateComponent},
   {path:'update', component:UpdateComponent},
-  {path:'delete', component:DeleteComponent}
+  {path:'delete', component:DeleteComponent},
+  {path:'**', component:ErrorComponent},
 ];
 
 

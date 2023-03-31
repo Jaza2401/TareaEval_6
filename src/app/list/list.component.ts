@@ -11,7 +11,14 @@ import { Component, Injectable, OnInit } from '@angular/core';
 })
 
 export class ListComponent implements OnInit{
-  items: any[] = [];
+  items: any[] = [
+    {
+      id: "COS01",
+      type: "Cosmetic",
+      name: "Sephora Skin Care",
+      price: "45.50",
+      stock: "4"
+}];
   ngOnInit() {
     const data = localStorage.getItem('data'); 
     console.log(data);
@@ -19,7 +26,6 @@ export class ListComponent implements OnInit{
     if (data) {
       const parsed_data = JSON.parse(data);   
       console.log(parsed_data);
-      this.items = [];
       for (let i = 0; i < parsed_data["names"].length; i++) {
         this.items.push({
           id: parsed_data["ids"][i],

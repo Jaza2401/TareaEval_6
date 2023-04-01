@@ -136,7 +136,7 @@ img {
     height: 35px;
 
     border: 1px solid  #7749F8;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .shopping_co{
@@ -145,7 +145,8 @@ img {
     height: 35px;
     justify-content: flex-end;
     border: 1px solid  #7749F8;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-left: 250px ;
     
 }
 
@@ -154,9 +155,9 @@ img {
 }
 
 .box_shop{
-    display: flex;
+    
     height:300px;
-    width: 480px;
+    width: 400px;
 }
 
 
@@ -170,4 +171,20 @@ img {
 
 #identities{
     margin-left: 25px;
+    display:inline-block;
 }
+
+.id{
+    margin-left: 20px;
+}
+
+.name{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.total{
+    display: inline-block;
+    margin-left: 200px;
+}
+

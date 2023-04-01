@@ -32,13 +32,13 @@
             </div>
         </div>
 
-        <div class="col-6 box_shop" style="background-color: #D9D9D933;">
+        <div class="col-6  box_shop" style="background-color: #D9D9D933;">
 
             <div class="row child">
                 <div class="ShopCart">
                     <div class="d-flex p-3 pb-0 ">
                         <i class="fi fi-rr-shopping-cart" style="color:#7749F8"></i>
-                        <div style="color:#7749F8">SHOPPING CART</div>
+                        <div style="color:#7749F8"> &nbsp;SHOPPING CART</div>
                     </div>
                     <hr>  
                 </div>
@@ -46,25 +46,34 @@
 
             <div class="row" *ngFor="let item of items">
                 <div class="checky">
-                    <div class="d-flex ">
+                    <div class="d-flex">
                         <input class="checkmark" type="checkbox">
-                        <div id ="identities"> 
-                            {{ item.id }}
-                            {{ item.name }}
-                            <b>${{ item.price }}</b>
+                        <div id ="identities" class="d-flex" > 
+                            <p class="id">{{ item.id }} </p>
+                            <p class="name"> {{ item.name }} </p>
+                            <p class="price"> <b>${{ item.price }}</b> </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <hr> 
-                    <a type="button"><i class="fi fi-rr-trash" style="color:#7749F8"></i> </a>
-                    <span> Total </span>
+            <hr> 
+            <div class="row" >
+                <div class="box_total">
+                    <div class="d-flex">
+                        <a type="button"><i class="fi fi-rr-trash" style="color:#7749F8"></i> </a>
+                        <div class="d-flex">
+                            <p class="total"> Total </p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
             <div class="row">
-                <button class = "shopping_co" style="color:#7749F8;">CHECKOUT</button>
+                <div class="d-flex">
+                    <button class = "shopping_co" style="color:#7749F8;">CHECKOUT</button>
+                </div>
             </div>
         </div>
     </div>

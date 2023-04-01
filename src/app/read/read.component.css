@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+img {
+    margin-right: 20px;
+    margin-top:10px;
+
+    box-sizing: border-box;
+    width: 292px;
+    height: 278px;
+    left: 177px;
+    top: 202px;
+
+    border: 1px solid #DEE2E6;
+    border-radius: 10px;
+}
+
+.product_id{
+    font-size: 14px;
+    margin-top:20px;
+
+
+    left: 35.9%;
+    right: 54.17%;
+    top: 20px;
+    bottom: 37.82%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height *
+    /* Heading/Title Color */
+    color: #152536;
+}
+
+.item_name{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 22px;
+
+    left: 35.76%;
+    right: 47.22%;
+    top: 26.94%;
+    bottom: 69.92%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    /* identical to box height, or 127% */
+
+    /* Heading/Title Color */
+    color: #152536;
+
+}
+
+.in_stock{
+    font-size: 16px;
+
+    left: 35.9%;
+    right: 53.26%;
+    top: 31.43%;
+    bottom: 66.44%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* Heading/Title Color */
+
+    color: #152536;
+
+}
+
+.item_price{
+    font-size: 22px;
+    color: #7749F8;
+
+    left: 35.9%;
+    right: 58.82%;
+    top: 36.03%;
+    bottom: 60.83%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    /* identical to box height, or 127% */
+    color: #7749F8;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+
+#qty{
+    font-size: 18x;
+    color:#343A40;
+    
+}
+
+
+
+.qty{
+    
+    width: 65px;
+    height: 28px;
+    left: 522px;
+    top: 397px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #343A40;
+
+}
+
+.input {
+    width: 90px;
+    border: 1px solid  black;
+    border-radius: 10px;
+}
+
+.shopping_car{
+    margin-top: 10px;
+    width: 155px;
+    height: 35px;
+
+    border: 1px solid  #7749F8;
+    border-radius: 10px;
+}
+
+.shopping_co{
+    margin-top: 10px;
+    width: 155px;
+    height: 35px;
+    justify-content: flex-end;
+    border: 1px solid  #7749F8;
+    border-radius: 10px;
+    
+}
+
+.shopping_car>i{
+    padding:10px
+}
+
+.box_shop{
+    display: flex;
+    height:300px;
+    width: 480px;
+}
+
+
+.checkmark {
+    margin-left: 10px;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+}
+
+#identities{
+    margin-left: 25px;
+}

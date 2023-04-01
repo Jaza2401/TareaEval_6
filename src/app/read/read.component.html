@@ -2,32 +2,70 @@
     <br>
     <h1>Shop</h1>
     <hr>
-    <div class="d-flex">
-    <div id="ShopList">
-        <div id="prodCard" class="d-flex container" *ngFor="let item of items">
-            <img src="" alt="ImgProd">
-            <div id="Info">
-                <div><b>PRODUCT ID: {{ item.id }}</b></div>
-                <div>{{ item.name }}</div>
-                <div><b>IN STOCK: </b>{{ item.stock }}</div>
-                <div>${{ item.price }}</div>
-                <div id="qty" class="d-flex">
-                    <div>Qty:</div>
-                    <input type="text">
+
+    <div class="row">
+        <div class = "col-6">
+            <div class="big_box">
+                <div id="prodCard" class="d-flex container" *ngFor="let item of items">
+                    <div class="row">
+                        <div class="col">
+                            <img src="" alt="ImgProd">
+                        </div>
+
+                        <div class="col">
+                            <div id="Info">
+                                <div class="product_id"><b>PRODUCT ID: {{ item.id }}</b></div>
+                                <div class="item_name">{{ item.name }}</div>
+                                <div class="in_stock"><b>IN STOCK: </b>{{ item.stock }}</div>
+                                <div class="item_price">${{ item.price }}</div>
+                                <div id="qty" class="d-flex">
+                                    <div class="qty">Qty:</div>
+                                    <input class="input" type="text">
+                                </div>
+                                <button class = "shopping_car" style="color:#7749F8"><i class="fi fi-rr-shopping-cart"></i> ADD TO CART</button>
+                            </div>
+                        </div>
+                         
+                    </div>
+                        
                 </div>
-                <button style="color:#7749F8"><i class="fi fi-rr-shopping-cart"></i> ADD TO CART</button>
             </div>
         </div>
-    </div>
-    <div id="ShopCart">
-        <div style="background-color: #D9D9D933;">
-            <div class="d-flex p-3 pb-0">
-                <i class="fi fi-rr-shopping-cart" style="color:#7749F8"></i>
-                <div style="color:#7749F8">SHOPPING CART</div>
+
+        <div class="col-6 box_shop" style="background-color: #D9D9D933;">
+
+            <div class="row child">
+                <div class="ShopCart">
+                    <div class="d-flex p-3 pb-0 ">
+                        <i class="fi fi-rr-shopping-cart" style="color:#7749F8"></i>
+                        <div style="color:#7749F8">SHOPPING CART</div>
+                    </div>
+                    <hr>  
+                </div>
             </div>
-            <hr>
-            
+
+            <div class="row" *ngFor="let item of items">
+                <div class="checky">
+                    <div class="d-flex ">
+                        <input class="checkmark" type="checkbox">
+                        <div id ="identities"> 
+                            {{ item.id }}
+                            {{ item.name }}
+                            <b>${{ item.price }}</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <hr> 
+                    <a type="button"><i class="fi fi-rr-trash" style="color:#7749F8"></i> </a>
+                    <span> Total </span>
+            </div>
+
+            <div class="row">
+                <button class = "shopping_co" style="color:#7749F8;">CHECKOUT</button>
+            </div>
         </div>
-    </div>
     </div>
 </div>
